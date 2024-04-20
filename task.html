@@ -20,6 +20,14 @@
       box-shadow: 0px 0px 50px yellow;
     }
 
+    #box1{
+      width: 200px;
+      aspect-ratio: 1/1;
+      height: 200px;
+      border: 2px solid dodgerblue;
+      background: lightblue;
+    }
+
   </style>
 
 
@@ -30,8 +38,14 @@
 <button>Click!</button>
 <button type="reset">Reset!</button><hr>
 
+
+
 <div class="bulb"></div><hr>
-<button name="onBtn">ON</button>
+<button name="onBtn">ON</button><hr>
+
+<button id="dblClick">Click Me</button><br><br><br>
+
+<div id="box1"></div>
 
 <script src="assets/jquery-3.7.1.min.js"></script>
 
@@ -60,6 +74,44 @@
       bulbElement.removeClass("styles_on")
     }
   });
+
+  /Double Click/
+
+  $("#dblClick").on('dblclick',() =>{
+    console.log("dblclick")
+  });
+
+  /Mouse Enter/
+
+  $("#box1").on('mouseenter',() => {
+    console.log("mouse enter")
+  });
+
+  /Mouse Leave/
+
+  $("#box1").on('mouseleave',() => {
+    console.log("mouse leave")
+  });
+
+
+  /Mouse Over/
+
+  $("#box1").on('mouseover',() => {
+    console.log("mouse over")
+  });
+
+  /Mouse Down/
+
+  $("#dblClick").on('mousedown',() => {
+    console.log("mouse Down")
+  });
+
+  /Mouse Up/
+
+  $("#dblClick").on('mouseup',() => {
+    console.log("mouse up")
+  });
+
 
 </script>
 

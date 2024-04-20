@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>J Query</title>
+</head>
+<body>
+
+<h1>Hello World 1</h1>
+<h1>Hello World 2</h1>
+
+<ul id="first--list">
+    <li>Java</li>
+    <li>Python</li>
+    <li>C</li>
+    <li>C++</li>
+    <li>C#</li>
+</ul>
+
+<ul id="second--list">
+    <li>Js</li>
+    <li>Vanilla Js</li>
+    <li>React Js</li>
+</ul>
+
+<script src="assets/jquery-3.7.1.min.js"></script>
+
+<script>
+    //$("h2").remove();// use this one we can remove any line that given
+
+    // 2 define methods in Arrays
+
+    let arr = [1,2,"hello","h1",true];// literals base
+    let constructorBase = new Array(1,2,"hello","h1",true); // constructor base
+    console.log(constructorBase);
+
+    console.log(Array.from("abcd"));// Just that create array for itself
+
+    document.getElementsByTagName("h1")[0].innerText;
+
+    $("h1").eq(0).text();
+    $("h1").eq(1).text();
+    $("h1").eq(2).text();
+
+    $("h1").first().text();
+    $("h1").last().text();
+
+    $("li").eq(1).text("Go");// replace value
+
+    $("#first--list>li:nth-child(3)").text("Js");
+
+    $(document).ready(function (){
+
+    });
+
+    var css = {
+        color: "pink",
+        background : "yellow"
+    }
+    $("h1").eq(1).css(css);
+    $("h1").eq(2).css({
+        color: "pink",
+        background: "yellow"
+    });
+</script>
+</body>
+</html>
