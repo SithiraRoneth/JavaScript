@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Concat</title>
+</head>
+<body>
+<h1>Array Concat</h1>
+
+<script src="assets/jquery-3.7.1.min.js"></script>
+<script>
+
+  var array1 = [10,20,30,40];
+  var array2 = [1,2,3,4,5];
+
+  console.log(array1.concat(array2));// Array merge
+
+
+  // Slice()
+
+  var newArray = array1.concat(array2);
+  console.log(newArray);
+
+  console.log(newArray.slice(-3));//last three numbers print in array
+
+  console.log(newArray.slice(2,5));// print array index [30,40,1]
+
+  // Splice()
+
+  var ar1 = ["cat1","cat2","cat3","cat4","cat5","cat6"];
+  console.log(ar1.splice(3));// get index[3] to end of the array
+
+  console.log(ar1);// then print array only have first three index only - splice method delete all another index in array
+
+  var ar2 = ["cat1","cat2","cat3","cat4","cat5","cat6"];
+  console.log(ar2);
+
+  console.log(ar2.splice(2,2));// 2 index and how many index want to delete [cat3,cat4]
+
+  console.log(ar2);// After that print only [cat1,cat2,cat5,cat6]
+
+  ar2[1] = true;// this can replace [1]index to value true
+  console.log(ar2);
+
+  // indexOf()
+
+  var index = [1,2,"cat","place",true,67];
+  console.log(index.indexOf(true));// given value index number
+
+
+  // lastIndexOf()
+
+  console.log(index.lastIndexOf("place"));// check in last to first
+
+  // includes()
+
+  console.log(index.includes("cat")); // print true
+  console.log(index.includes("cat2")); // print false
+
+
+  var numbers = [1,20,3,45,300,290,67,55];
+
+  const findOddNumbers = (array)=>{
+    var find  = [];
+    for (let i = 0; i < numbers.length; i++) {
+      if (numbers[i]%2===1){
+        find.push(numbers[i]);
+      }
+    }
+    return find;
+  }
+
+  var oddFind = findOddNumbers(numbers);
+  console.log("Odd Find : " + oddFind);
+
+  /*var odoNum = oddFindNum(numbers);
+  console.log("0DD : ",odoNum);
+
+  var result = numbers.filter(function (item){
+     return item%2>0;
+  });
+
+  console.log("Result : " + result);*/
+
+  // map()
+
+  var mapArray  = [true,1,2,3,4,5,6,7];
+
+  mapArray.map(item =>{
+    console.log(item)
+  });
+
+  mapArray.map((item,index)=>{
+    console.log(index + " : " + item);
+  });
+
+  var numberArray = [100,20,1,4,45,900];
+
+  numberArray.forEach(function (item){
+    console.log("forEach : " + item);
+  });
+
+  // sort
+  var sortAr = [1,80,34,90,100];
+  console.log(sortAr.sort());
+
+  // reverse
+  var rev = [100,20,30,10];
+  console.log(rev.reverse());// reverse array
+
+  // some
+
+  var someAr = [100,200,23,12,45,65];
+  someAr.some((item) =>{
+    return item%2>0; // true
+  });
+
+</script>
+</body>
+</html>

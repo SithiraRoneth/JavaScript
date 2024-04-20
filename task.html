@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+
+  <style>
+
+    .bulb {
+      width: 100px;
+      aspect-ratio: 1/1;
+
+      border: 3px solid black;
+      border-radius: 100%;
+    }
+
+    .styles_on{
+      background: yellow;
+      box-shadow: 0px 0px 50px yellow;
+    }
+
+  </style>
+
+
+</head>
+<body>
+
+<h3>0</h3>
+<button>Click!</button>
+<button type="reset">Reset!</button><hr>
+
+<div class="bulb"></div><hr>
+<button name="onBtn">ON</button>
+
+<script src="assets/jquery-3.7.1.min.js"></script>
+
+<script>
+
+  $("button").eq(0).on('click', () => {
+    let value = $("h3").eq(0).text();
+    $("h3").eq(0).text(+value + 1);
+  });
+
+  $("button").eq(1).on('click', () => {
+    $("h3").eq(0).text(0);
+  });
+
+  $("button").eq(2).on('click', () => {
+    let btnElement = $("button").eq(2)
+    let bulbElement = $("div").eq(0)
+
+    if(btnElement.text()==="ON"){
+      //On
+      btnElement.text("OFF")
+      bulbElement.addClass("styles_on");
+    }else{
+      //OFF
+      btnElement.text("ON")
+      bulbElement.removeClass("styles_on")
+    }
+  });
+
+</script>
+
+</body>
+</html>
