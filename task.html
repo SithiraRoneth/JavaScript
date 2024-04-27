@@ -46,6 +46,10 @@
 <button id="dblClick">Click Me</button><br><br><br>
 
 <div id="box1"></div>
+<hr>
+
+<label for="name">Name</label>
+<input type="text" placeholder="Enter Your Name" id="name">
 
 <script src="assets/jquery-3.7.1.min.js"></script>
 
@@ -110,6 +114,33 @@
 
   $("#dblClick").on('mouseup',() => {
     console.log("mouse up")
+  });
+
+  /Focus/
+  $("#name").on('focus',() =>{
+    console.log("focus");
+    $("#name").css('background','yellow')
+  });
+
+  /Blur/
+  $("#name").on('blur',() =>{
+    console.log("blur");
+    $("#name").css('background','blue')
+  });
+
+  /Key Up/
+  $("#name").on('keyup',() =>{
+    console.log("keyup");
+  });
+
+  /Key Down/
+  $("#name").on('keydown',() =>{
+    console.log("keydown");
+  });
+
+  /Key Pressed/
+  $("#name").on('keypress',() =>{
+    console.log("keypress");
   });
 
 
