@@ -30,6 +30,61 @@
   }
   console.log(findMax());
 
+  function Person(name,age){
+      //attribute
+      this.name=name;
+      this.age=age;
+  }
+
+  var person = new Person("Sithira",20);
+  console.log(person);
+  console.log(person.name);
+  console.log(person.age)
+
+  class Person2 {
+      constructor(name,age) {
+          this.name=name;
+          this.age=age;
+      }
+
+
+      myMethod1() {
+          console.log("Method 1")
+      }
+
+      myMethod2() {
+          console.log("Method 2")
+      }
+  }
+
+  var person2 = new Person2("Roneth",20);
+  console.log(person2);
+
+  let Person3 = {
+      name: "Kavindu",
+      address: "Horana",
+      age: 20,
+      call: ()=> {console.log("Hellow")}
+  }
+  console.log(Person3);
+  console.log(Person3.name);
+  console.log(Person3.address);
+  console.log(Person3.age);
+  Person3.call();
+
+  const Person4 = {
+      hello:() => {
+          console.log("Hiiiiiiiiii")
+      }
+  }
+
+  let person4= Object.create(Person4);
+  console.log(person4);
+  person4.hello();
+
+
+
+
 </script>
 </body>
 </html>
